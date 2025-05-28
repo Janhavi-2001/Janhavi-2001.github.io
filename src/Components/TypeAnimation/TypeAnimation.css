@@ -1,0 +1,29 @@
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+.type-animation {
+    font-size: clamp(1.5rem, 5vw, 3.5rem);
+    word-break: break-word;
+    white-space: pre-wrap;
+    text-align: left;
+    max-width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 1rem;
+    padding-left: 10vw;
+}
+
+.typed-cursor {
+    animation: blink 1s infinite;
+    color: #2774AE;
+    font-weight: bold;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+    .type-animation {
+        font-size: clamp(1.2rem, 6vw, 2.5rem);
+        text-align: left;
+    }
+}

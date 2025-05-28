@@ -2,14 +2,12 @@
     display: flex;
     justify-content: center; /* Center the content horizontally */
     align-items: center; /* Center the content vertically */
-    height: 100vh; /* Full viewport height */
     background-color: #222;
 }
 
 .navStyle {
     top: 0;
     width: 100%;
-    backdrop-filter: blur(8px);
     padding: 2rem 2rem;
     z-index: 1000;
     position: fixed;
