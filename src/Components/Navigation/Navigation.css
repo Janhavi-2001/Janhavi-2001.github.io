@@ -1,0 +1,141 @@
+.container {
+    display: flex;
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+    height: 100vh; /* Full viewport height */
+    background-color: #222;
+}
+
+.navStyle {
+    top: 0;
+    width: 100%;
+    backdrop-filter: blur(8px);
+    padding: 2rem 2rem;
+    z-index: 1000;
+    position: fixed;
+    display: flex;
+    justify-content: flex-end; /* Align content to the right */
+    max-width: 100%;
+}
+
+.linkStyle {
+    position: relative;
+    z-index: 1; /* Important for layering over pseudo-elements */
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: color 0.4s;
+    margin-right: 1.5rem;
+    display: inline-block;
+    padding: 0.5rem 0.75rem;
+}
+
+.linkStyle::before,
+.linkStyle::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 0%;
+    height: 0%;
+    transition: all 0.4s ease;
+    z-index: -1;
+}
+
+.linkStyle::after {
+    top: 0;
+    left: 0;
+    border-top: 2px solid transparent;
+    border-left: 2px solid transparent;
+    /* No background color here */
+}
+
+.linkStyle::before {
+    right: 0;
+    bottom: 0;
+    border-bottom: 2px solid transparent;
+    border-right: 2px solid transparent;
+    background-color: transparent; /* default */
+}
+
+.linkStyle:hover::before,
+.linkStyle:hover::after {
+    width: 97%;
+    height: 96%;
+    border-color: #2774AE;
+}
+
+/* ...existing code... */
+
+/* Burger menu styles */
+.burger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    justify-content: space-between;
+    margin-right: 1.5rem;
+    z-index: 1100;
+    margin-top: 1rem;
+    margin-left: auto; /* Align burger to the right */
+}
+
+.burger span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background: #fff;
+    border-radius: 2px;
+    transition: 0.4s;
+}
+
+/* Nav links container */
+.navLinks {
+    display: flex;
+    align-items: center;
+    transition: right 0.4s;
+}
+
+@media (max-width: 768px) {
+    .navStyle {
+        justify-content: flex-end;
+        padding: 1rem;
+        width: 100vw;
+        height: auto;
+        text-align: center;
+    }
+
+    .burger {
+        display: flex;
+    }
+
+    .navLinks {
+        position: fixed;
+        left: 0;
+        top: -100vh;
+        width: 100vw;
+        height: 100vh;
+        background: black;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-top: 0;
+        transition: top 0.4s ease-in-out;
+        z-index: 1050;
+        overflow: hidden;
+    }
+
+    .navLinks.open {
+        top: 0;
+        width: 100%;
+        background-color: black;
+    }
+
+    .linkStyle {
+        margin: 1.2rem 0;
+        font-size: 1.5rem;
+        padding: 1rem 2rem;
+    }
+}
