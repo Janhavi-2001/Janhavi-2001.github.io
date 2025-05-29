@@ -1,14 +1,24 @@
 import React, { useState } from 'react';
+import { useEffect } from 'react';
 import './Navigation.css';
 
 const Navigation = () => {
     const [menuOpen, setMenuOpen] = useState(false);
-
+    const [opaque, setOpaque] = useState(false);
+    
+    useEffect(() => {
+        const handleScroll = () => {
+            setOpaque(window.scrollY > 50); // Adjust scroll threshold as needed
+        };
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
+    
     const toggleMenu = () => setMenuOpen(!menuOpen);
 
     return (
         <div className='container'>
-            <nav className='navStyle'>
+            <nav className={`navStyle${opaque ? ' opaque' : ''}`}>
                 {/* Burger icon */}
                 <div className="burger" onClick={toggleMenu}>
                     <span></span>

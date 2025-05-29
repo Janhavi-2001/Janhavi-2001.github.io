@@ -12,13 +12,20 @@
     z-index: 1000;
     position: fixed;
     display: flex;
-    justify-content: flex-end; /* Align content to the right */
+    justify-content: flex-end;
     max-width: 100%;
+    background: transparent;
+    transition: background 0.4s;
+}
+
+.navStyle.opaque {
+    background: #222;
+    opacity: 0.85;
 }
 
 .linkStyle {
     position: relative;
-    z-index: 1; /* Important for layering over pseudo-elements */
+    z-index: 1;
     color: white;
     text-decoration: none;
     font-weight: 500;
@@ -45,7 +52,6 @@
     left: 0;
     border-top: 2px solid transparent;
     border-left: 2px solid transparent;
-    /* No background color here */
 }
 
 .linkStyle::before {
@@ -53,7 +59,7 @@
     bottom: 0;
     border-bottom: 2px solid transparent;
     border-right: 2px solid transparent;
-    background-color: transparent; /* default */
+    background-color: transparent;
 }
 
 .linkStyle:hover::before,
@@ -63,9 +69,6 @@
     border-color: #2774AE;
 }
 
-/* ...existing code... */
-
-/* Burger menu styles */
 .burger {
     display: none;
     flex-direction: column;
@@ -76,7 +79,7 @@
     margin-right: 1.5rem;
     z-index: 1100;
     margin-top: 1rem;
-    margin-left: auto; /* Align burger to the right */
+    margin-left: auto;
 }
 
 .burger span {
@@ -88,7 +91,6 @@
     transition: 0.4s;
 }
 
-/* Nav links container */
 .navLinks {
     display: flex;
     align-items: center;
@@ -114,7 +116,7 @@
         top: -100vh;
         width: 100vw;
         height: 100vh;
-        background: black;
+        background: #222;
         width: 100%;
         flex-direction: column;
         align-items: center;
@@ -128,7 +130,7 @@
     .navLinks.open {
         top: 0;
         width: 100%;
-        background-color: black;
+        background-color: #222;
     }
 
     .linkStyle {
