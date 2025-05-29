@@ -28,10 +28,10 @@ const Navigation = () => {
                 {/* Nav links */}
                 <div className={`navLinks${menuOpen ? ' open' : ''}`}>
                     <a href="#about" className='linkStyle' onClick={() => setMenuOpen(false)}>About Me</a>
-                    <a href="#experience" className='linkStyle' onClick={() => setMenuOpen(false)}>Experience</a>
-                    <a href="#projects" className='linkStyle' onClick={() => setMenuOpen(false)}>Projects</a>
-                    <a href="#education" className='linkStyle' onClick={() => setMenuOpen(false)}>Education</a>
-                    <a href="#contact" className='linkStyle' style={{ backgroundColor: '#2774AE', color: '#fff' }} onClick={() => setMenuOpen(false)}>Contact Me</a>
+                    <a href="#experience" className='linkStyle' onClick={e => {e.preventDefault();setMenuOpen(false);document.getElementById('experience')?.scrollIntoView({ behavior: 'smooth' });}}>Experience</a>
+                    <a href="#projects" className='linkStyle' onClick={e => {e.preventDefault();setMenuOpen(false);document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });}}>Projects</a>
+                    <a href="#education" className='linkStyle' onClick={e => {e.preventDefault();setMenuOpen(false);document.getElementById('education')?.scrollIntoView({ behavior: 'smooth' });}}>Education</a>
+                    <a href="#contact" className='linkStyle' style={{ backgroundColor: '#2774AE', color: '#fff' }} onClick={e => {e.preventDefault();setMenuOpen(false);document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth'});}}>Contact Me</a>
                 </div>
             </nav>
         </div>

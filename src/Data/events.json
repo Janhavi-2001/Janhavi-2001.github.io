@@ -1,0 +1,23 @@
+{
+    "events": 
+    [
+        {
+            "date": "2023-01-01",
+            "title": "New Year's Day",
+            "description": "Celebration of the new year.",
+            "image": "path/to/image1.jpg"
+        },
+        {
+            "date": "2023-02-14",
+            "title": "Valentine's Day",
+            "description": "Celebration of love and affection.",
+            "image": "path/to/image2.jpg"
+        },
+        {
+            "date": "2023-03-17",
+            "title": "St. Patrick's Day",
+            "description": "Celebration of Irish culture.",
+            "image": "path/to/image3.jpg"
+        }
+    ]
+}

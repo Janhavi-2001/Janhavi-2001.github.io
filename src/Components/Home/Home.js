@@ -3,6 +3,7 @@ import './Home.css';
 import TypeAnimation from '../TypeAnimation/TypeAnimation';
 import Image from './Image';
 
+
 const Home = () => {
     return (
         <div className="home-container">
