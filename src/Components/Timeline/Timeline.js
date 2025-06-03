@@ -3,6 +3,7 @@ import './Timeline.css';
 import { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { TypeAnimation } from 'react-type-animation';
 
 
 function TimelineCard({ card, side, index }) {
@@ -36,7 +37,23 @@ const Timeline = () => {
 
   return (
     <div className="timeline-wrapper" id = "experience">
-      <h1 style = {{ color: '#fff', paddingBottom: 20}}>Experience</h1>
+      <h1 className="type-animation timeline-heading" style={{ color: '#fff', paddingBottom: 20 }}>
+      {'print("'}
+        <TypeAnimation
+          sequence={[
+            'What have you done so far?', 2000,
+            '¿Qué has hecho hasta ahora?', 2000,
+            'これまで何をしてきましたか?', 2000,
+            'Что вы уже сделали?', 2000,
+            'अभी तक आपने क्या किया है?', 2000,
+          ]}
+          wrapper="span"
+          speed={50}
+          repeat={Infinity}
+          deletionSpeed={30}
+        />
+        {'")'}
+      </h1>
       <div className="timeline">
         {cards.map((card, index) => (
           <TimelineCard
