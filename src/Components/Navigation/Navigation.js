@@ -27,7 +27,7 @@ const Navigation = () => {
                 </div>
                 {/* Nav links */}
                 <div className={`navLinks${menuOpen ? ' open' : ''}`}>
-                    <a href="#about" className='linkStyle' onClick={() => setMenuOpen(false)}>About Me</a>
+                    <a href="#about" className='linkStyle' onClick={e => {e.preventDefault();setMenuOpen(false);document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });}}>About Me</a>
                     <a href="#experience" className='linkStyle' onClick={e => {e.preventDefault();setMenuOpen(false);document.getElementById('experience')?.scrollIntoView({ behavior: 'smooth' });}}>Experience</a>
                     <a href="#projects" className='linkStyle' onClick={e => {e.preventDefault();setMenuOpen(false);document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });}}>Projects</a>
                     <a href="#education" className='linkStyle' onClick={e => {e.preventDefault();setMenuOpen(false);document.getElementById('education')?.scrollIntoView({ behavior: 'smooth' });}}>Education</a>
