@@ -4,6 +4,8 @@
   "homepage": "https://Janhavi-2001.github.io",
   "private": true,
   "dependencies": {
+    "@coreui/coreui": "^5.4.0",
+    "@coreui/react": "^5.7.0",
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.0",
     "@headlessui/react": "^2.2.4",
