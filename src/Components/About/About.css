@@ -9,14 +9,15 @@
   position: relative;
   margin: 2rem auto;
   max-width: 70%;
-  padding: 1rem 1.5rem;
+  padding: 1.5rem;
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(10px);
-  border-radius: 12px;
+  border-radius: 5px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
   overflow: hidden;
-  animation: fadeInUp 1s ease forwards;
+  animation: none; /* Remove animation from page load */
   opacity: 0;
+  transition: opacity 1s ease; /* Fade-in on scroll */
 }
 
 @keyframes fadeInUp {
@@ -28,6 +29,11 @@
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+.quote-block.show {
+  animation: fadeInUp 1s ease forwards; /* Trigger fadeInUp animation when visible */
+  opacity: 1; /* Ensure opacity is 1 when visible */
 }
 
 .quote-corner-frame {
@@ -49,8 +55,8 @@
   left: 0;
   width: 20px;
   height: 20px;
-  border-top: 2px solid #3498db;
-  border-left: 2px solid #3498db;
+  border-top: 3px solid #3498db;
+  border-left: 3px solid #3498db;
 }
 
 .quote-corner-frame::after {
@@ -60,8 +66,8 @@
   left: 5px;
   width: 20px;
   height: 20px;
-  border-top: 2px solid #e67e22;
-  border-left: 2px solid #e67e22;
+  border-top: 3px solid #e67e22;
+  border-left: 3px solid #e67e22;
 }
 
 .corner-br-orange {
@@ -70,8 +76,8 @@
   right: 0;
   width: 20px;
   height: 20px;
-  border-bottom: 2px solid #e67e22;
-  border-right: 2px solid #e67e22;
+  border-bottom: 3px solid #e67e22;
+  border-right: 3px solid #e67e22;
 }
 
 .corner-br-blue {
@@ -80,12 +86,12 @@
   right: 5px;
   width: 20px;
   height: 20px;
-  border-bottom: 2px solid #3498db;
-  border-right: 2px solid #3498db;
+  border-bottom: 3px solid #3498db;
+  border-right: 3px solid #3498db;
 }
 
 .quote {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   font-style: italic;
   color: #fff;
   margin-bottom: 0.75rem;
@@ -93,15 +99,28 @@
 }
 
 .author {
-  text-align: right;
-  font-size: 0.9rem;
+  text-align: center;
+  font-size: 1rem;
   color: #ccc;
   font-weight: bold;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
 }
 
+.description {
+  font-size: 1.1rem;
+  color: #ddd;
+  margin-top: 1rem;
+  line-height: 1.8;
+  text-align: justify;
+  text-justify: inter-word;
+  width: 90%;
+  margin: 0 auto;
+  padding-bottom: 25px;
+}
+
 .quote-block:hover {
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+  transition: 0.5s ease-in-out;
 }
 
 .quote-corner-frame:hover::before,
@@ -114,65 +133,6 @@
   border-color: #fdcb6e;
 }
 
-.quote-block {
-  position: relative;
-  margin: 2rem auto;
-  max-width: 70%;
-  padding: 1rem 1.5rem;
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(10px);
-  border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-  overflow: hidden;
-  animation: fadeInUp 1s ease forwards;
-  opacity: 0;
-}
-
-@keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(40px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.quote-corner-frame {
-  position: relative;
-  padding: 0.5rem;
-}
-
-.quote-corner-frame::before,
-.quote-corner-frame::after,
-.corner-br-orange,
-.corner-br-blue {
-  transition: all 0.3s ease;
-}
-
-.quote-corner-frame::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 20px;
-  height: 20px;
-  border-top: 2px solid #3498db;
-  border-left: 2px solid #3498db;
-}
-
-.quote-corner-frame::after {
-  content: '';
-  position: absolute;
-  top: 5px;
-  left: 5px;
-  width: 20px;
-  height: 20px;
-  border-top: 2px solid #e67e22;
-  border-left: 2px solid #e67e22;
-}
-
 .about-heading {
   color: #fff;
   padding-bottom: 20px;
@@ -182,9 +142,7 @@
 }
 
 @media (max-width: 768px) {
-  .about-heading {
-    margin-left: 10px;
-    font-size: 1.7rem;
-    text-align: left;
+  .quote-block {
+    max-width: 90%;
   }
 }
