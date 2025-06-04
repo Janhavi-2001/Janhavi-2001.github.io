@@ -10,7 +10,7 @@ const Home = () => {
             <div className="home-content">
                 <TypeAnimation />
                 <p>I'm Janhavi Pimplikar, an aspiring software engineer cum language enthusiast.</p>
-                <a className="resume-button" href="public/Documents/Janhavi_Pimplikar_Resume.pdf" download> Here's my resume! </a>
+                <a className="resume-button" href="public\Documents\Janhavi-Pimplikar_ATS_Resume.pdf" download="Janhavi-Pimplikar_ATS_Resume.pdf"> Here's my resume! </a>
                 <a className="contact-button" href="#contact"> Get in touch! </a>
             </div>
             <Image />

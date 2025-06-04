@@ -1,37 +1,55 @@
-import React, { useState } from 'react';
-import { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Navigation.css';
 
 const Navigation = () => {
     const [menuOpen, setMenuOpen] = useState(false);
     const [opaque, setOpaque] = useState(false);
-    
+
+    // Store section ids to avoid repeating code
+    const sectionIds = ['about', 'experience', 'projects', 'education', 'contact'];
+
     useEffect(() => {
         const handleScroll = () => {
-            setOpaque(window.scrollY > 50); // Adjust scroll threshold as needed
+            setOpaque(window.scrollY > 50);
         };
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
-    
+
     const toggleMenu = () => setMenuOpen(!menuOpen);
+
+    const handleLinkClick = (e, id) => {
+        e.preventDefault();
+        setMenuOpen(false);
+        document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+    };
 
     return (
         <div className='container'>
             <nav className={`navStyle${opaque ? ' opaque' : ''}`}>
-                {/* Burger icon */}
-                <div className="burger" onClick={toggleMenu}>
+                {}
+                <div
+                    className={`burger${menuOpen ? ' open' : ''}`}
+                    onClick={toggleMenu}
+                    aria-label="Toggle navigation menu"
+                >
                     <span></span>
                     <span></span>
                     <span></span>
                 </div>
-                {/* Nav links */}
+                {}
                 <div className={`navLinks${menuOpen ? ' open' : ''}`}>
-                    <a href="#about" className='linkStyle' onClick={e => {e.preventDefault();setMenuOpen(false);document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });}}>About Me</a>
-                    <a href="#experience" className='linkStyle' onClick={e => {e.preventDefault();setMenuOpen(false);document.getElementById('experience')?.scrollIntoView({ behavior: 'smooth' });}}>Experience</a>
-                    <a href="#projects" className='linkStyle' onClick={e => {e.preventDefault();setMenuOpen(false);document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });}}>Projects</a>
-                    <a href="#education" className='linkStyle' onClick={e => {e.preventDefault();setMenuOpen(false);document.getElementById('education')?.scrollIntoView({ behavior: 'smooth' });}}>Education</a>
-                    <a href="#contact" className='linkStyle' style={{ backgroundColor: '#2774AE', color: '#fff' }} onClick={e => {e.preventDefault();setMenuOpen(false);document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth'});}}>Contact Me</a>
+                    {sectionIds.map(id => (
+                        <a
+                            key={id}
+                            href={`#${id}`}
+                            className={`linkStyle${opaque ? ' linkStyleWhite' : ''}`}
+                            onClick={(e) => handleLinkClick(e, id)}
+                            aria-label={`Go to ${id}`}
+                        >
+                            {id.charAt(0).toUpperCase() + id.slice(1).replace(/([A-Z])/g, ' $1')}
+                        </a>
+                    ))}
                 </div>
             </nav>
         </div>

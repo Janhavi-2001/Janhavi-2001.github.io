@@ -1,7 +1,7 @@
 .container {
     display: flex;
-    justify-content: center; /* Center the content horizontally */
-    align-items: center; /* Center the content vertically */
+    justify-content: center;
+    align-items: center;
     background-color: #222;
 }
 
@@ -26,7 +26,7 @@
 .linkStyle {
     position: relative;
     z-index: 1;
-    color: white;
+    color: #205a87;
     text-decoration: none;
     font-weight: 500;
     font-size: 1.1rem;
@@ -34,6 +34,10 @@
     margin-right: 1.5rem;
     display: inline-block;
     padding: 0.5rem 0.75rem;
+}
+
+.linkStyleWhite {
+    color: #fff !important;
 }
 
 .linkStyle::before,
@@ -88,7 +92,21 @@
     width: 100%;
     background: #fff;
     border-radius: 2px;
-    transition: 0.4s;
+    transition: all 0.4s ease;
+}
+
+.burger.open span:nth-child(1) {
+    transform: rotate(45deg) translateY(19px);
+    position:relative;
+}
+
+.burger.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.burger.open span:nth-child(3) {
+    transform: rotate(-45deg) translateY(-19px);
+    position: relative;
 }
 
 .navLinks {
@@ -131,12 +149,14 @@
         top: 0;
         width: 100%;
         background-color: #222;
+        color:#fff;
     }
 
     .linkStyle {
         margin: 1.2rem 0;
         font-size: 1.5rem;
         padding: 1rem 2rem;
+        color: #fff;
     }
 
     .navStyle.opaque {
