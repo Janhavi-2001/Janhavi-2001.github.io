@@ -21,7 +21,9 @@ const TypeAnimation = () => {
             ]}
             typeSpeed={100}
             loop
-            backSpeed={20}
+            backSpeed={50}
+            backDelay={2000}
+            smartBackspace={true}
             showCursor={true}
             style={{
             whiteSpace: 'pre',

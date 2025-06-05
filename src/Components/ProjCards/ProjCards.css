@@ -1,7 +1,8 @@
 .proj-cards-wrapper {
     text-align: center;
-    margin-top: 3rem;
-    padding: 0 10px;
+    padding: 80px 20px;
+    position: relative;
+    overflow: visible;
 }
 
 .proj-heading {
@@ -10,6 +11,7 @@
     margin-left: 60px;
     text-align: left;
     transition: margin 0.3s;
+    padding-top: 20px;
 }
 
 .proj-cards-container {
@@ -20,16 +22,17 @@
     align-items: center;
     margin: 0 auto;
     padding: 0 10px;
+    max-width: 100%;
 }
 
 .project-card {
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
-    padding: 20px;
-    border-radius: 8px;
+    padding: 10px;
+    border-radius: 2px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     width: 100%;
-    max-width: 250px;
+    max-width: 350px;
     margin: 0 auto;
     transition: transform 0.3s ease-in-out;
 }
@@ -37,6 +40,14 @@
 .project-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.project-thumbnail {
+    width: 100%;
+    height: 200px;
+    border-radius: 2px;
+    object-fit: cover;
+    margin-bottom: 5px;
 }
 
 .project-title {
@@ -63,12 +74,44 @@
     color: #fdcb6e;
 }
 
+.proj-cards-carousel .slick-prev,
+.proj-cards-carousel .slick-next {
+  z-index: 1;
+  width: 50px;
+  height: 50px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+}
+
+.proj-cards-carousel {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    overflow: visible;
+}
+
+.proj-cards-carousel .slick-prev {
+  left: -20px;
+}
+
+.proj-cards-carousel .slick-next {
+  right: -20px;
+}
+
+.proj-cards-carousel .slick-prev:before,
+.proj-cards-carousel .slick-next:before {
+  font-size: 20px;
+  color: #fff;
+}
+
+
 @media (min-width: 768px) {
     .proj-cards-container {
         flex-direction: row;
         justify-content: space-evenly;
         flex-wrap: wrap;
-        gap: 10px;
+        gap: 20px;
     }
 
     .project-card {
@@ -79,11 +122,11 @@
 
 @media (max-width: 767px) {
     .proj-cards-container {
-        gap: 30px;
+        gap: 60px;
     }
 
     .project-card {
-        width: 90%;
+        width: 100%;
     }
 
     .proj-heading {
