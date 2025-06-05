@@ -1,5 +1,4 @@
 .about-wrapper {
-  font-family: Arial, sans-serif;
   text-align: center;
   padding: 80px 20px;
   position: relative;
@@ -15,9 +14,9 @@
   border-radius: 5px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
   overflow: hidden;
-  animation: none; /* Remove animation from page load */
+  animation: none;
   opacity: 0;
-  transition: opacity 1s ease; /* Fade-in on scroll */
+  transition: opacity 1s ease;
 }
 
 @keyframes fadeInUp {
@@ -32,8 +31,8 @@
 }
 
 .quote-block.show {
-  animation: fadeInUp 1s ease forwards; /* Trigger fadeInUp animation when visible */
-  opacity: 1; /* Ensure opacity is 1 when visible */
+  animation: fadeInUp 1s ease forwards;
+  opacity: 1;
 }
 
 .quote-corner-frame {
@@ -91,7 +90,7 @@
 }
 
 .quote {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   font-style: italic;
   color: #fff;
   margin-bottom: 0.75rem;
@@ -107,7 +106,7 @@
 }
 
 .description {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   color: #ddd;
   margin-top: 1rem;
   line-height: 1.8;
