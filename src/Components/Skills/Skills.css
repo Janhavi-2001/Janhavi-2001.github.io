@@ -1,0 +1,54 @@
+.skills-wrapper {
+    text-align: center;
+    padding: 80px 20px;
+    position: relative;
+    overflow: visible;
+}
+
+.skills-heading {
+    color: #fff;
+    padding-bottom: 20px;
+    margin-left: 60px;
+    text-align: left;
+    transition: margin 0.3s;
+    padding-top: 20px;
+}
+
+.skills-marquee {
+  width: 80%;
+  overflow: hidden;
+  position: relative;
+  height: 100px;
+  margin: 0 auto;
+  align-items: center;
+  padding: 60px 0;
+}
+
+.marquee-content {
+  display: flex;
+  width: max-content;
+  animation: scroll-left 20s linear infinite;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.skill-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+  margin: 0 10px;
+  color: #e67e22;
+}
+
+.skill-item svg {
+  width: 100px;
+  height: 100px;
+}

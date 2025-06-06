@@ -7,6 +7,7 @@ import events from './Data/events.json';
 import About from './Components/About/About';
 import ProjCards from './Components/ProjCards/ProjCards';
 import Loader from './Components/Loader/Loader';
+import Skills from './Components/Skills/Skills';
 import { useState, useEffect } from 'react';
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
           <Home />
           <About />
           <Timeline events={events} />
+          <Skills />
           <ProjCards />
         </div>
         <Footer />
