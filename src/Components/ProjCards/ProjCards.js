@@ -9,11 +9,17 @@ const ProjCards = () => {
   const settings = {
     dots: true,
     infinite: true,
-    speed: 500,
+    speed: 800,
     slidesToShow: 2,
     slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
     centerMode: true,
     centerPadding: '60px',
+    infinite: true,
+    arrows: true,
+    cssEase: 'ease-in-out',
+    pauseOnHover: true,
     responsive: [
       {
         breakpoint: 768,
@@ -57,7 +63,7 @@ const ProjCards = () => {
       </h1>
 
       <Slider {...settings} className="proj-cards-carousel">
-        {[1, 2, 3].map((n) => (
+        {[1, 2, 3, 4, 5, 6].map((n) => (
           <div key={n} className="project-card">
             <img src="/Images/home-language-bg.png" alt={`Project ${n}`} className="project-thumbnail" />
             <h3 className="project-title">Project Title {n}</h3>

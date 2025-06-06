@@ -55,7 +55,7 @@ const About = () => {
             I enjoy challenges and understanding perspectives, whether it's related to debugging code or optimizing performance.
             <br /><br />
             Passionate about languages and communication, I believe that understanding diverse perspectives is key to building inclusive technology.
-            With fluency in 3 Indian languages, a JLPT N3 certification, and a hobbyist learner of Mandarin Chinese, I wish to bring a unique blend of technical skills and cultural insight to my work. I'm always open to enhancing my knowledge in software engineering, internationalization, and localization, and contributing to projects that make a difference in our perception of software development.
+            With fluency in 3 Indian languages, a JLPT N3 certification, and a hobbyist learner of Mandarin Chinese, I wish to bring a unique blend of technical skills and cultural insight to my work. I'm always open to enhancing my knowledge in software engineering, internationalization, and contributing to projects that make a difference in our perception of software development.
           </p>
           <br />
         </div>
