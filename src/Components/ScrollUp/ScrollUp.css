@@ -1,0 +1,30 @@
+.goTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #e67e22;
+  border: none;
+  border-radius: 50%;
+  padding: 8px 10px;
+  cursor: pointer;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.goTop__icon {
+  color: #fff;
+  font-size: 18px;
+}
+
+.goTop:hover {
+  background-color: #e67e22;
+  opacity: 0.8;
+}
+
+.goTop__hidden {
+  display: none;
+}
+
+.goTop__visible {
+  display: block;
+}
