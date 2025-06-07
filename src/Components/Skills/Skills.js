@@ -1,7 +1,7 @@
 import React from 'react';
 import './Skills.css';
 import { TypeAnimation } from 'react-type-animation';
-import { SiJavascript, SiReact, SiPython, SiCplusplus, SiHtml5, SiCss3, SiBootstrap, SiLaravel, SiSpringboot, SiMysql, SiSqlite, SiGit, SiBitbucket, SiPostman, SiKeras, SiTensorflow } from 'react-icons/si';
+import { SiJavascript, SiReact, SiPython, SiCplusplus, SiHtml5, SiCss3, SiBootstrap, SiLaravel, SiSpringboot, SiMysql, SiSqlite, SiGit, SiBitbucket, SiPostman, SiKeras, SiTensorflow, SiNumpy, SiPandas, SiPlotly } from 'react-icons/si';
 
 const Skills = () => {
   return (
@@ -42,6 +42,9 @@ const Skills = () => {
         <span className="skill-item"><SiPostman /></span>
         <span className="skill-item"><SiKeras /></span>
         <span className='skill-item'><SiTensorflow /></span>
+        <span className="skill-item"><SiNumpy /></span>
+        <span className="skill-item"><SiPandas /></span>
+        <span className="skill-item"><SiPlotly /></span>
 
 
         <span className="skill-item"><SiCplusplus /></span>
@@ -60,6 +63,9 @@ const Skills = () => {
         <span className="skill-item"><SiPostman /></span>
         <span className="skill-item"><SiKeras /></span>
         <span className='skill-item'><SiTensorflow /></span>
+        <span className="skill-item"><SiNumpy /></span>
+        <span className="skill-item"><SiPandas /></span>
+        <span className="skill-item"><SiPlotly /></span>
       </div>
     </div>
     </div>
