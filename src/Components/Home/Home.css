@@ -55,27 +55,7 @@ span {
     background-color: #1a5f8a;
 }
 
-.contact-button {
-    background-color: #2774AE;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    font-size: 1rem;
-    text-decoration: none;
-    display: inline-block;
-    margin-top: 1rem;
-    font-family: 'Arial', sans-serif;
-    font-weight: bold;
-    border-radius: 2px;
-}
-
-.contact-button:hover {
-    background-color: #1a5f8a;
-}
-
-.resume-button, .contact-button {
+.resume-button {
     margin-left: 10vw;
     margin-right: -9vw;
 }
