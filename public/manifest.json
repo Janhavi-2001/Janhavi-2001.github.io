@@ -1,21 +1,39 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Janhavi Pimplikar's Website",
+  "name": "Janhavi Pimplikar's Personal Website",
+  "description": "Welcome to Janhavi Pimplikar's personal website, showcasing her portfolio, projects, and blog.",
+  "lang": "en-US",
+  "dir": "ltr",
+  "scope": "/",
+  "orientation": "portrait",
+  "display_override": [
+    "window-controls-overlay",
+    "minimal-ui",
+    "fullscreen"
+  ],
+  "prefer_related_applications": false,
+  "related_applications": [],
+  "categories": [
+    "personal",
+    "portfolio",
+    "blog",
+    "projects"
+  ],
   "icons": [
     {
-      "src": "favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
+      "src": "favicon.png",
+      "sizes": "256 x 256",
       "type": "image/x-icon"
     },
     {
-      "src": "logo192.png",
-      "type": "image/png",
-      "sizes": "192x192"
+      "src": "portfolio-pic.jpg",
+      "sizes": "256x256",
+      "type": "image/jpeg"
     },
     {
-      "src": "logo512.png",
-      "type": "image/png",
-      "sizes": "512x512"
+      "src": "home-language-bg.png",
+      "sizes": "512x512",
+      "type": "image/png"
     }
   ],
   "start_url": ".",
