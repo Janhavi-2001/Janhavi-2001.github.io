@@ -5,6 +5,7 @@
     linear-gradient(45deg, #222 87%, #9ac1ce 13%);
   background-size: 40px 40px, cover;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  overflow-x: hidden;
 }
 
 .slide-in {
@@ -19,3 +20,16 @@
     transform: translateY(0);
   }
 }
+
+@media (max-width: 768px) {
+  .home-container {
+    background:
+      radial-gradient(circle, rgba(255,255,255,0.15) 1.75px, transparent 1px),
+      linear-gradient(180deg, #222 100%, #9ac1ce 0%);
+    background-size: 40px 40px, cover;
+    background-position: 0 0, 0 0;
+    padding-bottom: 80px;
+    min-height: 100vh; /* Ensure it fills the screen to show the background */
+  }
+}
+
