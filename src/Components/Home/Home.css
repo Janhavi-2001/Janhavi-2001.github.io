@@ -96,6 +96,18 @@ span {
   gap: 20px;
   z-index: 1000;
   align-items: center;
+  animation: floatInOnce 1.5s ease-out 1s forwards;
+}
+
+@keyframes floatInOnce {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .home-social-icons::before {
@@ -190,6 +202,8 @@ span {
         margin-top: 2rem;
         gap: 16px;
         width: 100%;
+        opacity: 1;
+        animation: none;
     }
 
     .home-social-icons::before,

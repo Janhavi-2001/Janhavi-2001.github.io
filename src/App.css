@@ -29,7 +29,7 @@
     background-size: 40px 40px, cover;
     background-position: 0 0, 0 0;
     padding-bottom: 80px;
-    min-height: 100vh; /* Ensure it fills the screen to show the background */
+    min-height: 100vh;
   }
 }
 
