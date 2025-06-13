@@ -11,6 +11,7 @@ import Skills from './Components/Skills/Skills';
 import ScrollUp from './Components/ScrollUp/ScrollUp';
 import Contact from './Components/Contact/Contact';
 import { useState, useEffect } from 'react';
+import { useRef } from 'react';
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -20,6 +21,7 @@ function App() {
     return () => clearTimeout(timer);
   }, []);
 
+  const contactRef = useRef(null);
   return (
     loading ? (
       <Loader />
@@ -27,13 +29,15 @@ function App() {
       <div className="App">
         <Navigation />
         <div className="slide-in">
-          <Home />
+          <Home contactRef={contactRef}/>
           <ScrollUp />
           <About />
           <Timeline events={events} />
           <Skills />
           <ProjCards />
-          <Contact />
+          <div ref={contactRef}>
+                <Contact />
+          </div>
         </div>
         <Footer />
       </div>
