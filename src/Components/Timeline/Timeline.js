@@ -7,22 +7,47 @@ import { TypeAnimation } from 'react-type-animation';
 
 
 function TimelineCard({ card, side, index }) {
-
-    useEffect(() => {
+  useEffect(() => {
     AOS.init({
-        duration: 800,
-        once: true
+      duration: 800,
+      once: true,
     });
-    }, []);
+  }, []);
+
+  const tasksArray = card.tasks.split(/\. |\n|, /).filter(Boolean);
+  const skillsArray = card.skills.split(/, /).filter(Boolean);
+
+  const blurbAos = side === 'left' ? 'fade-left' : 'fade-right';
 
   return (
     <>
-    <div className="timeline-node" style={{ top: `${250 * index + 200}px` }} />
-      <div className={`timeline-card-container ${side}`} data-aos={side === 'left' ? 'fade-right' : 'fade-left'}>
+      <div className="timeline-node" style={{ top: `${360 * index + 200}px` }} />
+        <div
+          className={`timeline-date-blurb ${side === 'left' ? 'right' : 'left'}`}
+          style={{ top: `${360 * index + 180}px` }}
+          data-aos={blurbAos}
+        >
+          {card.date}
+        </div>
+      <div
+        className={`timeline-card-container ${side}`}
+        data-aos={side === 'left' ? 'fade-right' : 'fade-left'}
+      >
         <div className="timeline-card">
           <h3 className="card-title">{card.title}</h3>
-          <p className="card-content">{card.content}</p>
-          <p className="card-date">{card.date}</p>
+          <p className="card-content">{card.company}</p>
+          <ul className="card-tasks">
+            {tasksArray.map((task, i) => (
+              <li key={i}>{task}</li>
+            ))}
+          </ul>
+          <p className="card-skills">
+            {skillsArray.map((skill, i) => (
+              <span key={i} className="skill-badge">
+                {skill}
+              </span>
+            ))}
+          </p>
         </div>
       </div>
     </>
@@ -31,8 +56,8 @@ function TimelineCard({ card, side, index }) {
 
 const Timeline = () => {
   const [cards] = useState([
-    { id: 1, title: 'Software Development Intern', content: 'Fair Share IT Services Pvt. Ltd.', date: 'Nov 2023 - Aug 2024' },
-    { id: 2, title: 'Digital Insights Intern', content: 'Hitachi Vantara India Pvt. Ltd.', date: 'Feb 2023 - Aug 2023' },
+    { id: 1, title: 'Software Development Intern', company: 'Fair Share IT Services Pvt. Ltd.', date: 'Nov 2023 - Aug 2024', tasks: 'Developed a user-friendly portal Holiday API for streamlining holiday management to ensure seamless data accessibility. Designed responsive layouts and contributed to enhancing the user interface of  ‘WebsitesWatch’.', skills: 'Laravel, REST API, Bootstrap' },
+    { id: 2, title: 'Digital Insights Intern', company: 'Hitachi Vantara India Pvt. Ltd.', date: 'Feb 2023 - Aug 2023', tasks: 'Created interactive dashboards to visualize metrics and improve data-driven decision-making. Implemented formulas to create optimized calculated measures for dynamic aggregation of data.', skills: 'Microsoft Power BI, DAX' },
   ]);
 
   return (

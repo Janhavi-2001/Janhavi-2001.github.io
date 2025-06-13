@@ -65,9 +65,10 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
   position: relative;
   width: 100%;
-  max-width: 400px;
-  height: 200px;
+  max-width: 450px;
+  height: 300px;
   z-index: 1;
+  text-align: left !important;
 }
 
 .timeline-card-container.left .timeline-card {
@@ -124,14 +125,72 @@
 }
 
 .card-title {
+  font-size: 1.4rem;
   font-weight: bold;
-  font-size: 18px;
-  margin-bottom: 10px;
+  margin-bottom: 0.3em;
+  color: #2774AE;
 }
 
-.card-content {
-  font-size: 14px;
-  color: #333;
+.card-company {
+  color: #2774AE;
+  font-weight: 500;
+}
+
+.card-tasks {
+  margin: 0.5em 0 0 1.2em;
+  padding: 0;
+  color: #222;
+  font-size: 1rem;
+  list-style: disc;
+  line-height: 1.5;
+}
+
+.timeline-date-blurb {
+  position: absolute;
+  width: fit-content;
+  max-width: 200px;
+  background: rgba(255, 255, 255, 0.85);
+  color: #2774ae;
+  font-weight: bold;
+  padding: 10px 16px;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(31, 38, 135, 0.1);
+  font-size: 1.2rem;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  z-index: 1;
+  margin: 0 180px;
+}
+
+.timeline-date-blurb:hover {
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 4px 12px rgba(31, 38, 135, 0.2);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timeline-date-blurb.left {
+  left: 5%;
+  text-align: left;
+  transform: translate(-50%);
+}
+
+.timeline-date-blurb.right {
+  right: 5%;
+  text-align: right;
+  transform: translate(50%);
+}
+
+.skill-badge {
+  display: inline-block;
+  background-color: #d35400;
+  color: white;
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 6px 12px;
+  margin: 4px 6px 0 0;
+  border-radius: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.3s ease;
 }
 
 @media (max-width: 768px) {
