@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './ProjCards.css';
 import { TypeAnimation } from 'react-type-animation';
 import Slider from 'react-slick';
@@ -6,6 +6,18 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
 const ProjCards = () => {
+  
+  const [animate, setAnimate] = useState(false);
+
+  useEffect(() => {
+    setAnimate(true);
+  }, []);
+
+  const card = {
+    skills: 'React, JavaScript, CSS, HTML, Node.js, Express.js, MongoDB',
+  };
+  const skillsArray = card.skills.split(/, /).filter(Boolean);
+
   const settings = {
     dots: true,
     infinite: true,
@@ -16,30 +28,14 @@ const ProjCards = () => {
     autoplaySpeed: 3000,
     centerMode: true,
     centerPadding: '60px',
-    infinite: true,
     arrows: true,
     cssEase: 'ease-in-out',
     pauseOnHover: true,
     responsive: [
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 1
-        }
-      },
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 2
-        }
-      },
-      {
-        breakpoint: 1440,
-        settings: {
-          slidesToShow: 3
-        }
-      }
-    ]
+      { breakpoint: 768, settings: { slidesToShow: 1 } },
+      { breakpoint: 1024, settings: { slidesToShow: 2 } },
+      { breakpoint: 1440, settings: { slidesToShow: 3 } },
+    ],
   };
 
   return (
@@ -62,16 +58,26 @@ const ProjCards = () => {
         {'")'}
       </h1>
 
-      <Slider {...settings} className="proj-cards-carousel">
-        {[1, 2, 3, 4, 5, 6].map((n) => (
-          <div key={n} className="project-card">
-            <img src="/Images/home-language-bg.png" alt={`Project ${n}`} className="project-thumbnail" />
-            <h3 className="project-title">Project Title {n}</h3>
-            <p className="project-description">Brief description of the project.</p>
-            <a href="#" className="project-link">View Project</a>
-          </div>
-        ))}
-      </Slider>
+      <div className="carousel-container">
+        <Slider {...settings} className={`proj-cards-carousel ${animate ? 'show' : ''}`}>
+          {[1, 2, 3, 4, 5, 6].map(n => (
+            <div key={n} className="project-card">
+              <img src="/Images/home-language-bg.png" alt={`Project ${n}`} className="project-thumbnail" />
+              <h3 className="project-title">Project Title {n}</h3>
+              <p className="project-description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              </p>
+              <p className="card-skills">
+                {skillsArray.map((skill, i) => (
+                  <span key={i} className="skill-badge">{skill}</span>
+                ))}
+              </p>
+              <button className="live-link">View Live</button>
+              <button className="demo-link">View Demo</button>
+            </div>
+          ))}
+        </Slider>
+      </div>
     </div>
   );
 };

@@ -32,9 +32,10 @@
     border-radius: 2px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     width: 100%;
-    max-width: 275px;
+    max-width: 300px;
     margin: 0 auto;
     transition: transform 0.3s ease-in-out;
+    height: 620px;
 }
 
 .project-card:hover {
@@ -60,18 +61,67 @@
     font-size: 1.1rem;
     color: #fff;
     margin-bottom: 1.5rem;
+    text-align: justify;
+    padding: 0 10px;
 }
 
-.project-link {
-    font-size: 1.2rem;
-    color: #e67e22;
+.live-link {
+    outline: 2px solid #2774AE;
+    color: #2774AE;
+    background-color: var(--background);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 0.8rem;
     text-decoration: none;
+    display: inline-block;
+    margin-top: 1rem;
     font-weight: bold;
-    transition: color 0.3s ease-in-out;
+    border-radius: 2px;
+    margin-right: 15px;
+    margin-top: 20px;
 }
 
-.project-link:hover {
-    color: #fdcb6e;
+.live-link:hover {
+    background-color: #1a5f8a;
+    color: #fff;
+}
+
+.demo-link {
+    outline: 2px solid #d35400;
+    color: #d35400;
+    background-color: var(--background);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 0.8rem;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 1rem;
+    font-weight: bold;
+    border-radius: 2px;
+    margin-top: 20px;
+}
+
+.demo-link:hover {
+    background-color: #b04c00;
+    color: #fff;
+}
+
+.skill-badge {
+  display: inline-block;
+  background-color: #2774AE;
+  color: white;
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 6px 12px;
+  margin: 4px 6px 0 0;
+  border-radius: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.3s ease;
+  bottom: 0;
 }
 
 .proj-cards-carousel .slick-prev,
@@ -88,7 +138,6 @@
     max-width: 1100px;
     margin: 0 auto;
     overflow: visible;
-    background-color: rgba(255, 255, 255, 0.05);
     padding-top: 80px;
     padding-bottom: 60px;
     display: flex;
@@ -98,7 +147,15 @@
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(10px);
     border-radius: 8px;
+    background: rgba(255, 255, 255, 0);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    transition: opacity 0.5s ease;
+}
 
+.carousel-container.show {
+  opacity: 1;
 }
 
 .proj-cards-carousel .slick-prev {
