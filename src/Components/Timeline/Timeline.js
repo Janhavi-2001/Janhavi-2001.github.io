@@ -6,54 +6,6 @@ import 'aos/dist/aos.css';
 import { TypeAnimation } from 'react-type-animation';
 
 
-// function TimelineCard({ card, side, index }) {
-//   useEffect(() => {
-//     AOS.init({
-//       duration: 800,
-//       once: true,
-//     });
-//   }, []);
-
-//   const tasksArray = card.tasks.split(/\. |\n|, /).filter(Boolean);
-//   const skillsArray = card.skills.split(/, /).filter(Boolean);
-
-//   const blurbAos = side === 'left' ? 'fade-left' : 'fade-right';
-
-//   return (
-//     <>
-//       <div className="timeline-node" style={{ top: `${360 * index + 200}px` }} />
-//         <div
-//           className={`timeline-date-blurb ${side === 'left' ? 'right' : 'left'}`}
-//           style={{ top: `${360 * index + 180}px` }}
-//           data-aos={blurbAos}
-//         >
-//           {card.date}
-//         </div>
-//       <div
-//         className={`timeline-card-container ${side}`}
-//         data-aos={side === 'left' ? 'fade-right' : 'fade-left'}
-//       >
-//         <div className="timeline-card">
-//           <h3 className="card-title">{card.title}</h3>
-//           <p className="card-content">{card.company}</p>
-//           <ul className="card-tasks">
-//             {tasksArray.map((task, i) => (
-//               <li key={i}>{task}</li>
-//             ))}
-//           </ul>
-//           <p className="card-skills">
-//             {skillsArray.map((skill, i) => (
-//               <span key={i} className="skill-badge">
-//                 {skill}
-//               </span>
-//             ))}
-//           </p>
-//         </div>
-//       </div>
-//     </>
-//   );
-// }
-
 function TimelineCard({ card, side, index }) {
   useEffect(() => {
     AOS.init({
@@ -71,10 +23,11 @@ function TimelineCard({ card, side, index }) {
   return (
     <div className="timeline-entry">
       <div className="timeline-line"></div>
-      <div className="timeline-node"></div>
+      <div className="timeline-node" style={{ top: `${360 * index + 200}px` }}></div>
       <div
         className={`timeline-date-blurb ${side === 'left' ? 'right' : 'left'}`}
         data-aos={blurbAos}
+        style={{ top: `${360 * index + 180}px` }}
       >
         {card.date}
       </div>
