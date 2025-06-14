@@ -26,7 +26,8 @@ const ProjCards = () => {
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 3000,
-    centerMode: true,
+    centerMode: false,
+    variableWidth: false,
     centerPadding: '60px',
     arrows: true,
     cssEase: 'ease-in-out',
@@ -40,15 +41,16 @@ const ProjCards = () => {
 
   return (
     <div className="proj-cards-wrapper" id="projects">
-      <h1 className="type-animation proj-heading">
+      <h1 className="type-animation proj-heading" style={{ color: '#fff', paddingBottom: 20 }}>
         {'print("'}
         <TypeAnimation
           sequence={[
-            'Check out my projects!', 2000,
-            '¡Mira mis proyectos!', 2000,
-            'Regarde mes projets !', 2000,
-            'Schau dir meine Projekte an!', 2000,
-            '看看我的项目！', 2000,
+            'Projects', 2000,
+            'प्रोजेक्ट्स', 2000,
+            'Projets', 2000,
+            '프로젝트', 2000,
+            'Projekte', 2000,
+            
           ]}
           wrapper="span"
           speed={50}
@@ -65,7 +67,7 @@ const ProjCards = () => {
               <img src="/Images/home-language-bg.png" alt={`Project ${n}`} className="project-thumbnail" />
               <h3 className="project-title">Project Title {n}</h3>
               <p className="project-description">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
               </p>
               <p className="card-skills">
                 {skillsArray.map((skill, i) => (
