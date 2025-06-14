@@ -7,7 +7,7 @@
 
 .proj-heading {
     color: #fff;
-    padding-bottom: 20px;
+    margin-bottom: 60px;
     margin-left: 60px;
     text-align: left;
     transition: margin 0.3s;
@@ -34,6 +34,7 @@
     max-width: 300px;
     margin: 0 auto;
     height: 530px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-card:hover {
