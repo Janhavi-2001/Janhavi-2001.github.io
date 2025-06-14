@@ -6,15 +6,15 @@ import { SiJavascript, SiReact, SiPython, SiCplusplus, SiHtml5, SiCss3, SiBootst
 const Skills = () => {
   return (
     <div className="skills-wrapper" id="skills">
-      <h1 className="type-animation skills-heading">
+      <h1 className="type-animation skills-heading" style={{ color: '#fff', paddingBottom: 20 }}>
         {'print("'}
         <TypeAnimation
           sequence={[
-            'Show me your skills!', 2000,
-            '¡Muéstrame tus habilidades!', 2000,
-            'Montre-moi tes compétences!', 2000,
-            'Zeig mir deine Fähigkeiten!', 2000,
-            '展示你的技能！', 2000,
+            'Skills', 2000,
+            'Compétences', 2000,
+            '技能', 2000,
+            'Fähigkeiten', 2000,
+            'Habilidades', 2000,
           ]}
           wrapper="span"
           speed={50}

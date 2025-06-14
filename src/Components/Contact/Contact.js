@@ -27,11 +27,11 @@ const Contact = () => {
         {'print("'}
         <TypeAnimation
           sequence={[
-            'How can we connect?', 2000,
-            '¡Cómo podemos conectar?', 2000,
-            'हम कैसे संपर्क कर सकते हैं?', 2000,
-            'Wie können wir uns verbinden?', 2000,
-            'どのように連絡できますか。', 2000,
+            'Contact', 2000,
+            'お問い合わせ', 2000,
+            'Contacto', 2000,
+            'Kontaktieren', 2000,
+            '联系我', 2000,
           ]}
           wrapper="span"
           speed={50}

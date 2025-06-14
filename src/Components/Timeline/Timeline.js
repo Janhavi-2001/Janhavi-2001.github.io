@@ -66,11 +66,11 @@ const Timeline = () => {
       {'print("'}
         <TypeAnimation
           sequence={[
-            'What have you done so far?', 2000,
-            '¿Qué has hecho hasta ahora?', 2000,
-            'これまで何をしてきましたか?', 2000,
-            'Что вы уже сделали?', 2000,
-            'अभी तक आपने क्या किया है?', 2000,
+            'Experience', 2000,
+            'Experiencia', 2000,
+            '経験', 2000,
+            'Expérience', 2000,
+            'कार्य अनुभव', 2000,
           ]}
           wrapper="span"
           speed={50}

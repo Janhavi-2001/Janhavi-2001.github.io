@@ -233,9 +233,7 @@
   }
 
   .timeline-heading {
-    font-size: 1.5rem;
     margin-left: 0;
-    padding-bottom: 10px;
-    text-align: left;
+    text-align: center;
   }
 }

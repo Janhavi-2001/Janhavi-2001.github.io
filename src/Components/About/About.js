@@ -15,7 +15,7 @@ const About = () => {
         }
       });
     }, {
-      threshold: 0.5
+      threshold: 0.2
     });
 
     observer.observe(quoteBlock);
@@ -28,11 +28,11 @@ const About = () => {
 
         <TypeAnimation
           sequence={[
-            'Tell me about yourself!', 2000,
-            '¡Cuéntame sobre ti!', 2000,
-            'Parle-moi de toi !', 2000,
-            'Erzähl mir von dir!', 2000,
-            '话说你自己！', 2000,
+            'About Me', 2000,
+            '关于我', 2000,
+            'Sobre mí', 2000,
+            '나에 대해', 2000,
+            'Über mich', 2000,
           ]}
           wrapper="span"
           speed={50}
