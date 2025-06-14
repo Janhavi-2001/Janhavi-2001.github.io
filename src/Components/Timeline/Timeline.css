@@ -194,46 +194,114 @@
 }
 
 @media (max-width: 768px) {
-  .timeline-card-container {
-    width: calc(100% - 60px);
-    padding-left: 60px;
-    padding-right: 20px;
-  }
-
-  .timeline-card-container.left,
-  .timeline-card-container.right {
-    left: 0 !important;
-    right: 0 !important;
-    text-align: left;
-  }
-
-  .timeline-card {
-    margin: 0;
-    border-right: none !important;
-    border-left: 5px solid #2774ae !important;
-  }
-
-  .timeline-card:hover {
-    transform: scale(1.02);
-    transition: transform 0.3s ease;
-  }
-
-  .timeline-card::after {
-    display: none;
-  }
-
-  .timeline-node {
-    left: 4px;
-    transform: translateY(-50%);
+  .timeline-entry {
+    position: relative;
+    padding-left: 40px;
+    margin-bottom: 40px;
   }
 
   .timeline-line {
-    left: 20px;
-    transform: none;
+    position: absolute;
+    top: 0;
+    left: 18px;
+    bottom: 0;
+    width: 4px;
+    background-color: #fff;
+    z-index: 0;
   }
 
-  .timeline-heading {
+  .timeline-node {
+    position: absolute;
+    top: 0;
+    left: 18px;
+    width: 20px;
+    height: 20px;
+    background-color: #2774ae;
+    border-radius: 50%;
+    z-index: 2;
+  }
+
+  .timeline-card-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .timeline-card {
+    position: relative;
+    background-color: #fff;
+    width: auto;
+    box-sizing: border-box;
+    z-index: 1;
+    height: auto;
+    padding: 20px;
+  }
+
+  .timeline-card-container.left {
+    width: 100%;
+    padding: 15px;
+    margin-left: 10px;
+    text-align: left;
+  }
+
+  .timeline-card-container.right {
+    width: 100%;
+    padding: 15px;
+    margin-right: 10px;
+    text-align: left;
+}
+
+  .skill-badge {
+    margin: 4px 4px 0 0;
+    display: inline-block;
+    padding: 4px 8px;
+    font-size: 0.8rem;
+    background-color: #eee;
+    border-radius: 4px;
+  }
+  .timeline-card-container.left .timeline-card::after,
+  .timeline-card-container.right .timeline-card::after {
+    display: none;
+  }
+
+  .timeline-card-container.left .timeline-card,
+  .timeline-card-container.right .timeline-card {
+    border-left: none;
+    border-right: none;
+    border-top: 4px solid #2774ae;
+    border-bottom: 4px solid #2774ae;
+  }
+
+  .timeline-card-container.right {
+    width: 100%;
+    padding: 15px;
+    text-align: left;
+    left: -8px;
+  }
+
+  .timeline-card-container.right .timeline-card {
     margin-left: 0;
-    text-align: center;
+    margin-right: 0;
+    width: 100%;
+  }
+
+  .timeline-date-blurb.left,
+  .timeline-date-blurb.right {
+    margin-left: 15px;
+    margin-bottom: 8px;
+    padding-left: 20px;
+    text-align: left;
+    font-weight: 600;
+    width: 80%;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .timeline-date-blurb.left {
+    right: 0;
+    left: -10px;
+    text-align: left;
   }
 }
