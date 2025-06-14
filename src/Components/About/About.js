@@ -51,11 +51,9 @@ const About = () => {
           <p className="author">– Matt Mullenweg</p>
           <br />
           <p className="description">
-            As a budding software engineer, my focus is on leveraging my problem-solving skills to create efficient and user-friendly applications. I'm eager to explore the different ways technology can simplify our lives, and it has since evolved into an inclination towards building functional yet intuitive software. 
-            I enjoy challenges and understanding perspectives, whether it's related to debugging code or optimizing performance.
+            As a software engineering graduate student at Arizona State University, my focus is on leveraging my problem-solving skills to create efficient and user-friendly applications. I'm eager to explore the different ways technology can simplify our lives, and it has since evolved into an inclination towards building functional yet intuitive software.
             <br /><br />
-            Passionate about languages and communication, I believe that understanding diverse perspectives is key to building inclusive technology.
-            With fluency in 3 Indian languages, a JLPT N3 certification in Japanese, and a hobbyist learner of Mandarin Chinese, I wish to bring a unique blend of technical skills and cultural insight to my work. I'm always open to enhancing my knowledge in software engineering, internationalization, and contributing to projects that make a difference in our perception of global software development.
+            With fluency in 3 Indian languages, a JLPT N3 certification in Japanese, and a hobbyist learner of Mandarin Chinese, I also believe that understanding diverse perspectives is key to building inclusive technology. I'm always open to enhancing my knowledge in software engineering, internationalization, and contributing to projects that make a difference in our perception of global software development.
           </p>
           <br />
         </div>

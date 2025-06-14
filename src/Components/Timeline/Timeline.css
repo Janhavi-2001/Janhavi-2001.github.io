@@ -132,7 +132,7 @@
 }
 
 .card-company {
-  color: #2774AE;
+  color: #222;
   font-weight: 500;
 }
 
@@ -182,7 +182,7 @@
 
 .skill-badge {
   display: inline-block;
-  background-color: #d35400;
+  background-color: #2774AE;
   color: white;
   font-size: 0.9rem;
   font-weight: 500;
@@ -242,25 +242,23 @@
   .timeline-card-container.left {
     width: 100%;
     padding: 15px;
-    margin-left: 10px;
+    margin-left: 11px;
     text-align: left;
   }
-
-  .timeline-card-container.right {
-    width: 100%;
-    padding: 15px;
-    margin-right: 10px;
-    text-align: left;
-}
 
   .skill-badge {
-    margin: 4px 4px 0 0;
     display: inline-block;
-    padding: 4px 8px;
-    font-size: 0.8rem;
-    background-color: #eee;
-    border-radius: 4px;
+    background-color: #2774AE;
+    color: white;
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding: 6px 12px;
+    margin: 4px 6px 0 0;
+    border-radius: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+    transition: background-color 0.3s ease;
   }
+
   .timeline-card-container.left .timeline-card::after,
   .timeline-card-container.right .timeline-card::after {
     display: none;
@@ -278,7 +276,7 @@
     width: 100%;
     padding: 15px;
     text-align: left;
-    left: -8px;
+    left: -13px;
   }
 
   .timeline-card-container.right .timeline-card {
@@ -303,5 +301,16 @@
     right: 0;
     left: -10px;
     text-align: left;
+  }
+
+  .timeline-date-blurb.right {
+    left: -9px;
+    text-align: left;
+  }
+
+  .card-company {
+    color: #222;
+    font-weight: 500;
+    font-size: 1rem;
   }
 }

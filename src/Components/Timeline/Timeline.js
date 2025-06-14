@@ -84,7 +84,7 @@ function TimelineCard({ card, side, index }) {
       >
         <div className="timeline-card">
           <h3 className="card-title">{card.title}</h3>
-          <p className="card-content">{card.company}</p>
+          <p className="card-company">{card.company}</p>
           <ul className="card-tasks">
             {tasksArray.map((task, i) => (
               <li key={i}>{task}</li>

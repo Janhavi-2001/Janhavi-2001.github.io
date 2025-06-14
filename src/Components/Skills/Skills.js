@@ -11,7 +11,7 @@ const Skills = () => {
         <TypeAnimation
           sequence={[
             'Skills', 2000,
-            'Compétences', 2000,
+            'навыки', 2000,
             '技能', 2000,
             'Fähigkeiten', 2000,
             'Habilidades', 2000,
