@@ -13,7 +13,7 @@ const Home = ({ contactRef }) => {
         <div className="home-container">
             <div className="home-content">
                 <TypeAnimation className="type-animation" />
-                <p>I'm Janhavi Pimplikar, an aspiring software engineer cum language enthusiast.</p>
+                <p>I'm Janhavi Pimplikar, an aspiring software engineer and a language enthusiast.</p>
                 <div className="buttons-container">
                     <a className="resume-button" href="public\Documents\Janhavi-Pimplikar_ATS_Resume.pdf" download="Janhavi-Pimplikar_ATS_Resume.pdf">
                         Here's my resume!

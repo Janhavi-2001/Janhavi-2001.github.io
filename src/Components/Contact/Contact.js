@@ -48,7 +48,7 @@ const Contact = () => {
         ref={formRef}
       >
         <div className="contact-left">
-          <h1 className="contact-form-heading">Wanna Reach Out?</h1>
+          <h1 className="contact-form-heading">Connect with me.</h1>
           <p>
             Whether you have a question, want to collaborate, or just want to say hi,
             my inbox is always open. I’ll try my best to get back to you. 
