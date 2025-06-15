@@ -33,8 +33,14 @@
     display: inline-block;
 }
 
-.image {
+.profile-image {
     zoom: 100%;
+    opacity: 0;
+    transition: opacity 0.6s ease;
+}
+
+.profile-image.loaded {
+  opacity: 1;
 }
 
 @media (max-width: 768px) {

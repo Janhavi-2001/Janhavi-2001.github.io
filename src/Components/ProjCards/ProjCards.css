@@ -5,12 +5,17 @@
     overflow: visible;
 }
 
+.carousel-container {
+    margin-top: -20px;
+}
+
 .proj-heading {
     color: #fff;
     margin-bottom: 60px;
     margin-left: 60px;
     text-align: left;
     transition: margin 0.3s;
+    margin-top: 40px;
 }
 
 .proj-cards-container {

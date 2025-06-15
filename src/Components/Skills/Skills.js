@@ -68,8 +68,8 @@ const Skills = () => {
         <span className="skill-item"><SiPlotly />Plotly</span>
       </div>
     </div>
-    </div>
-  );
+  </div>
+);
 }
 
 export default Skills;
