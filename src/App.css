@@ -1,7 +1,7 @@
 .App {
   text-align: center;
   background:
-    radial-gradient(circle, rgba(255,255,255,0.15) 1.75px, transparent 1px),
+    radial-gradient(circle, rgba(255,255,255,0.15) 1.265px, transparent 1px),
     linear-gradient(45deg, #222 89%, #9ac1ce 11%);
   background-size: 40px 40px, cover;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
