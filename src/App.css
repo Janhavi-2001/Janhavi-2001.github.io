@@ -5,6 +5,7 @@
     linear-gradient(45deg, #222 89%, #9ac1ce 11%);
   background-size: 40px 40px, cover;
   font-family: 'Calibri', sans-serif;
+  overflow-x: hidden;
 }
 
 .slide-in {

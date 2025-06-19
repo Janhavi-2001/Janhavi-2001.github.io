@@ -233,12 +233,12 @@
     }
 
     .skill-badge {
-        margin: 4px 4px 0 0;
+        margin: 8px 8px 0 0;
         padding: 6px 12px;
         background-color: #2774AE;
         color: white;
         border-radius: 12px;
-        font-size: 0.8rem;
+        font-size: 0.85rem;
     }
 
     .live-link, .demo-link {
