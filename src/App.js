@@ -8,6 +8,7 @@ import About from './Components/About/About';
 import ProjCards from './Components/ProjCards/ProjCards';
 import Loader from './Components/Loader/Loader';
 import Skills from './Components/Skills/Skills';
+import Education from './Components/Education/Education';
 import ScrollUp from './Components/ScrollUp/ScrollUp';
 import Contact from './Components/Contact/Contact';
 import { useState, useEffect } from 'react';
@@ -35,6 +36,7 @@ function App() {
           <Timeline events={events} />
           <Skills />
           <ProjCards />
+          <Education />
           <div ref={contactRef}>
                 <Contact />
           </div>

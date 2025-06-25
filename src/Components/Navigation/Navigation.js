@@ -6,7 +6,7 @@ const Navigation = () => {
     const [opaque, setOpaque] = useState(false);
 
     // Store section ids to avoid repeating code
-    const sectionIds = ['about', 'experience', 'skills', 'projects', 'contact'];
+    const sectionIds = ['about', 'experience', 'skills', 'projects', 'education', 'contact'];
 
     useEffect(() => {
         const handleScroll = () => {

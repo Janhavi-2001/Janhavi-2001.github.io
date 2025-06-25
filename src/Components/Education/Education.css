@@ -1,0 +1,121 @@
+.education-wrapper {
+  position: relative;
+  padding: 80px 20px;
+  text-align: center;
+  background: #9ac1ce;
+}
+
+.education-heading {
+  margin-left: 60px;
+  color: #fff;
+  text-align: left;
+  transition: margin 0.3s;
+}
+
+.education-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+  margin: 20px auto 0;
+  padding: 40px 0;
+  border-radius: 10px;
+}
+
+.education-card {
+  background: #fff;
+  backdrop-filter: blur(10px);
+  border-top: 4px solid #2774AE;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 25px;
+  max-width: 750px;
+  width: 80%;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.education-card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transform: scale(1.01) !important;
+}
+
+.education-icon {
+  font-size: 48px;
+  color: #2774AE;
+}
+.education-title {
+  font-size: 1.5rem;
+  color: #2774AE;
+  margin-bottom: 10px;
+}
+.education-institution {
+  font-size: 1.4rem;
+  color: #555;
+  margin-bottom: 5px;
+}
+.education-major {
+  font-size: 1.5rem;
+  color: #2774AE;
+  margin-bottom: 10px;
+}
+.education-duration {
+  font-size: 1.2rem;
+  color: #777;
+  margin-bottom: 30px;
+}
+.education-details-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 80%;
+  margin: auto;
+}
+.education-details {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  display: inline-block;
+  background-color: #D35400;
+  color: white;
+  font-weight: 500;
+  padding: 6px 12px;
+  margin: 4px 6px 0 0;
+  border-radius: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  .education-wrapper {
+    padding: 60px 10px;
+    margin: 0 auto;
+  }
+  .education-heading {
+    margin-left: 0;
+    text-align: center;
+  }
+  .education-title, .education-major {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    width: 60%;
+    margin: 0 auto;
+  }
+  .education-content {
+    width: 90%;
+    padding: 20px;
+  }
+  .education-details {
+    font-size: 0.8rem;
+    margin-bottom: 10px;
+  }
+  .education-card {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .education-icon {
+    font-size: 36px;
+  }
+}
