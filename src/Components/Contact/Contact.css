@@ -23,7 +23,7 @@
   border-radius: 5px;
   animation: fadeIn 0.8s ease-out forwards;
   border: 1px solid #ddd;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .contact-container.fade-in {
