@@ -2,7 +2,7 @@
   text-align: center;
   background:
     radial-gradient(circle, rgba(255,255,255,0.15) 1.265px, transparent 1px),
-    linear-gradient(45deg, #222 89%, #9ac1ce 11%);
+    linear-gradient(45deg, #222 90%, #9ac1ce 10%);
   background-size: 40px 40px, cover;
   font-family: 'Calibri', sans-serif;
   overflow-x: hidden;

@@ -200,6 +200,12 @@
     margin-bottom: 40px;
   }
 
+  .timeline-heading {
+    margin-left: 0;
+    text-align: center;
+    margin-bottom: 30px !important;
+  }
+
   .timeline-line {
     position: absolute;
     top: 0;
