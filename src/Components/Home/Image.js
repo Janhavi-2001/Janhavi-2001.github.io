@@ -7,10 +7,8 @@ function Image() {
   return (
     <div className="image-container">
       <img
-        src="/Images/portfolio-pic.jpg"
+        src="/Images/portfolio-pic.png"
         alt="portfolio-picture"
-        width={500}
-        height={500}
         className={`profile-image${loaded ? ' loaded' : ''}`}
         onLoad={() => setLoaded(true)}
       />
