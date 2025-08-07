@@ -13,10 +13,29 @@ const ProjCards = () => {
     setAnimate(true);
   }, []);
 
-  const card = {
-    skills: 'React, JavaScript, CSS, HTML, Node.js, Express.js, MongoDB',
-  };
-  const skillsArray = card.skills.split(/, /).filter(Boolean);
+const projects = [
+  {
+      id: 1,
+      title: 'TransManage: Translation Management Made Easy!',
+      description: 'A Java full-stack application prototype to streamline multilingual content translation workflows and allow users to manage translation tasks and track their progress.',
+      imgSrc: 'Images/home-language-bg.png',
+      skills: ['React.js', 'Spring Boot', 'REST APIs', 'H2 Database', 'JSON']
+    },
+    {
+      id: 2,
+      title: 'Inattentive Driver Identification Smart System',
+      description: 'This group-based project proposes a real-time recognition system to monitor and mitigate inattentive driving patterns using Deep Learning and IoT.',
+      videoSrc: 'https://drive.google.com/file/d/1uhLIq1V9wMCbYq0pzbTUG3zpWn-d5pTf/preview',
+      skills: ['Python', 'TensorFlow', 'Keras', 'Raspberry Pi']
+    },
+    {
+      id: 3,
+      title: 'Floe: A Custom Built Programming Language',
+      description: 'A group initiative to create a cross-platform, imperative programming language that supports all data types, loops, and conditional statements, with it\'s own lexical analyzer, parser, and run-time environment.',
+      videoSrc: 'https://youtu.be/fUp9p1lgjWI',
+      skills: ['Python', 'ANTLR', 'Bash Scripting']
+    },
+  ];
 
   const settings = {
     dots: true,
@@ -62,21 +81,53 @@ const ProjCards = () => {
 
       <div className="carousel-container">
         <Slider {...settings} className={`proj-cards-carousel ${animate ? 'show' : ''}`}>
-          {[1, 2, 3, 4, 5, 6].map(n => (
-            <div key={n} className="project-card">
-              <img src="/Images/home-language-bg.png" alt={`Project ${n}`} className="project-thumbnail" />
-              <h3 className="project-title">Project Title {n}</h3>
-              <p className="project-description">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </p>
-              <p className="card-skills">
-                {skillsArray.map((skill, i) => (
-                  <span key={i} className="skill-badge">{skill}</span>
-                ))}
-              </p>
-              <button className="live-link">View Live</button>
-              <button className="demo-link">View Demo</button>
+          {projects.map(project => (
+          <div key={project.id} className="project-card">
+            {project.videoSrc && project.videoSrc !== '#' ? (
+              project.videoSrc.includes('youtube.com') || project.videoSrc.includes('youtu.be') ? (
+                <iframe
+                  src={project.videoSrc.replace('watch?v=', 'embed/').replace('youtu.be/', 'www.youtube.com/embed/')}
+                  title={project.title}
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  frameBorder={0}
+                  width="100%"
+                  height="200"
+                ></iframe>
+              ) : (
+              project.videoSrc.includes('drive.google.com') ? (
+                <iframe
+                  src={project.videoSrc}
+                  title={project.title}
+                  width="100%"
+                  height="200"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  frameBorder={0}
+                ></iframe>
+            ) : (
+              <video width="100%" height="200" controls>
+                <source src={project.videoSrc} type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            )
+              )
+            ) : (
+              <img src={project.imgSrc} alt={project.title} className="project-image" width="100%" />
+            )}
+
+            <h3 className="project-title">{project.title}</h3>
+            <p className="project-description">
+              {project.description}
+            </p>
+            <div className="card-skills">
+              {project.skills.map((skill, i) => (
+                <span key={i} className="skill-badge">
+                  {skill}
+                </span>
+              ))}
             </div>
+          </div>
           ))}
         </Slider>
       </div>
