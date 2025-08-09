@@ -22,13 +22,11 @@ const Home = ({ contactRef }) => {
                         Contact Me
                     </a>
                 </div>
-
-                <div className='home-social-icons'>
+            </div>
+            <div className='home-social-icons'>
                     <SocialIcon url="mailto:jpimplikar26@gmail.com" target="_blank" className='social-icon' style={{height: 40, width: 40}}/>
                     <SocialIcon url="https://linkedin.com/in/janhavi-pimplikar" target="_blank" className='social-icon' style={{height: 40, width: 40}}/>
                     <SocialIcon url="https://github.com/Janhavi-2001" target="_blank" className='social-icon' style={{height: 40, width: 40}}/>
-                </div>
-
             </div>
             <Image />
         </div>
