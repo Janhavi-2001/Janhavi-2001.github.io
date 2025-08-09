@@ -19,7 +19,7 @@ const projects = [
       title: 'TransManage: Translation Management Made Easy!',
       description: 'A Java full-stack application prototype to streamline multilingual content translation workflows and allow users to manage translation tasks and track their progress.',
       imgSrc: 'Images/home-language-bg.png',
-      skills: ['React.js', 'Spring Boot', 'REST APIs', 'H2 Database', 'JSON']
+      skills: ['React.js', 'Spring Boot', 'REST APIs', 'H2 Database']
     },
     {
       id: 2,
@@ -44,7 +44,7 @@ const projects = [
     slidesToShow: 2,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 8000,
     centerMode: false,
     variableWidth: false,
     centerPadding: '60px',
@@ -113,7 +113,7 @@ const projects = [
             )
               )
             ) : (
-              <img src={project.imgSrc} alt={project.title} className="project-image" width="100%" />
+              <img src={project.imgSrc} alt={project.title} className="project-image" width="100%" height="200" />
             )}
 
             <h3 className="project-title">{project.title}</h3>
