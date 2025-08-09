@@ -29,8 +29,8 @@ function App() {
     ) : (
       <div className="App">
         <Navigation />
+        <Home contactRef={contactRef} />
         <div className="slide-in">
-          <Home contactRef={contactRef}/>
           <ScrollUp />
           <About />
           <Timeline events={events} />

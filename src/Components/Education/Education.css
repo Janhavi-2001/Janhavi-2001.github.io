@@ -49,6 +49,7 @@
   font-size: 1.5rem;
   color: #2774AE;
   margin-bottom: 10px;
+  margin-top: 10px;
 }
 .education-institution {
   font-size: 1.4rem;
@@ -133,6 +134,7 @@
   .education-title, .education-major {
     font-size: 1.4rem;
     margin-bottom: 20px;
+    margin-top: 20px;
     width: 90%;
     margin: 0 auto;
     align-items: center;

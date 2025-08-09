@@ -16,10 +16,10 @@ const Home = ({ contactRef }) => {
                 <p>I'm Janhavi Pimplikar, an aspiring software engineer and a language enthusiast.</p>
                 <div className="buttons-container">
                     <a className="resume-button" href="public\Documents\Janhavi-Pimplikar_ATS_Resume.pdf" download="Janhavi-Pimplikar_ATS_Resume.pdf">
-                        Here's my resume!
+                        Download Resume
                     </a>
                     <a className="contact-button" onClick={handleContactClick}>
-                        Get in touch!
+                        Contact Me
                     </a>
                 </div>
 
